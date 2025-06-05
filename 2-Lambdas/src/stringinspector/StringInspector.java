@@ -1,4 +1,4 @@
-package stringInspector;
+package stringinspector;
 
 @FunctionalInterface
 public interface StringInspector {

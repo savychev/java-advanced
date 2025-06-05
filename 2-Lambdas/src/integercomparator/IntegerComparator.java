@@ -1,4 +1,4 @@
-package integerComparator;
+package integercomparator;
 
 @FunctionalInterface
 public interface IntegerComparator {

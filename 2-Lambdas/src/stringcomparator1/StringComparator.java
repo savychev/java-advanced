@@ -1,4 +1,4 @@
-package stringComparator;
+package stringcomparator1;
 
 @FunctionalInterface
 public interface StringComparator {

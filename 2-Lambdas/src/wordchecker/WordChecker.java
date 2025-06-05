@@ -1,4 +1,4 @@
-package wordChecker;
+package wordchecker;
 
 @FunctionalInterface
 public interface WordChecker {
