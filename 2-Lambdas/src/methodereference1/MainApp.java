@@ -7,6 +7,5 @@ public class MainApp {
 
         System.out.println(triple1.transform(1)); // 3
         System.out.println(triple2.transform(7)); // 21
-
     }
 }
