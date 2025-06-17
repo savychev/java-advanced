@@ -70,4 +70,42 @@ public class LabWerk {
         return joined.toUpperCase();                                    // alles omzetten naar hoofdletters
     }
 
+
+    //    Schrijf een programma om het gemiddelde van alle even getallen in een lijst te vinden met behulp van streams.
+    public static double averageOfEven(List<Integer> numbers) {
+        return numbers.stream()
+                .filter(n -> n % 2 == 0)                        // alleen even getallen filteren
+                .mapToInt(Integer::intValue)                            // omzetten naar een IntStream
+                .average()                                              // gemiddelde berekenen
+                .orElse(0.0);                                      // als de lijst leeg is — 0 teruggeven
+    }
+
+    //    Schrijf een programma om de lengte van de langste string in een lijst te vinden met behulp van streams.
+    public static int lengthOfLongestString(List<String> strings) {
+        return strings.stream()
+                .mapToInt(String::length)                               // elke string omzetten naar zijn lengte
+                .max()                                                  // maximumwaarde bepalen
+                .orElse(0);                                        // als de lijst leeg is — 0 teruggeven
+    }
+
+    //    Schrijf een programma om te controleren of een lijst alleen even bevat
+    public static boolean allEven(List<Integer> numbers) {
+        return numbers.stream()
+                .allMatch(n -> n % 2 == 0);                         // true als alle getallen even zijn
+
+    }
+
+    //    Schrijf een programma om het product van alle elementen in een lijst te vinden met behulp van streams.
+    public static int productOfAll(List<Integer> numbers) {
+        return numbers.stream()
+                .reduce(1, (a, b) -> a * b);          // alle getallen reduceren tot één vermenigvuldiging
+    }
+
+    //    Schrijf een programma om alle dubbele elementen uit een lijst te verwijderen met behulp van streams.
+    public static List<String> removeDuplicates(List<String> strings) {
+        return strings.stream()
+                .distinct()                           // dubbele waarden verwijderen
+                .collect(Collectors.toList());        // verzamelen in een lijst
+    }
+
 }
