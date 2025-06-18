@@ -32,7 +32,7 @@ public class LabWerk {
     //    omgekeerde volgorde zijn.
     public List<String> filterC(List<String> strings) {
         List<String> result = strings.stream()
-                .filter(s -> s.startsWith("a") && s.length() > 3) // filteren op beginletter en lengte
+                .filter(s -> s.startsWith("a") && s.length() > 3) // filteren op beginletter en langer dan 3 letters
                 .collect(Collectors.toList());                          // resultaat verzamelen in een tijdelijke lijst
 
         Collections.reverse(result); // lijst omkeren naar omgekeerde volgorde
@@ -107,5 +107,4 @@ public class LabWerk {
                 .distinct()                           // dubbele waarden verwijderen
                 .collect(Collectors.toList());        // verzamelen in een lijst
     }
-
 }
