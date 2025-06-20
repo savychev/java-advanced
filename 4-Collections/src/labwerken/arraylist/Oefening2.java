@@ -1,4 +1,4 @@
-package labwerk;
+package labwerken.arraylist;
 
 import java.util.ArrayList;
 import java.util.Collections;
