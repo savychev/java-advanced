@@ -8,4 +8,16 @@ public class Product {
         this.name = name;
         this.productId = productId;
     }
+
+    public int getProductId() {
+        return productId;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "name='" + name + '\'' +
+                ", productId=" + productId +
+                '}';
+    }
 }
